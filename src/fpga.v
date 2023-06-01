@@ -80,7 +80,7 @@ module tt_um_gatecat_fpga_top(
         end
     endgenerate
 
-    assign io_out = {cell_q[5][W-1], cell_q[4][W-1], cell_q[3][W-1], cell_q[H-1]};
+    assign uo_out = {cell_q[5][W-1], cell_q[4][W-1], cell_q[3][W-1], cell_q[H-1]};
 
 
 endmodule
