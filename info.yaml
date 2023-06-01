@@ -1,0 +1,64 @@
+--- 
+# TinyTapeout project information
+project:
+  wokwi_id:    0        # If using wokwi, set this to your project's ID
+
+# If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. 
+# Source files must be in ./src and you must list each source file separately
+  source_files:        
+    - fpga.v
+  top_module:  "tt_um_gatecat_fpga_top"      
+  # Put the name of your top module here, must start with "tt_um_". Make it unique by prepending your github username
+
+# How many tiles your design occupies? A single tile is about 167x108 uM.
+# Before changing this, please reach out to us on discord to discuss your design.
+  tiles: "1x1"    # Valid values: 1x1, 1x2, 2x2, 4x2 or 8x2
+
+# Keep a track of the submission yaml
+yaml_version: 3.5
+
+# As everyone will have access to all designs, try to make it easy for someone new to your design to know what
+# it does and how to operate it. This info will be automatically collected and used to make a datasheet for the chip.
+#
+# Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
+documentation: 
+  author:       "myrtle"     # Your name
+  discord:      "gatecat#6502"      # Your discord handle
+  title:        "FPGA test"      # Project title
+  description:  "small mux2 fpga test"      # Short description of what your project does
+  how_it_works: "TODO write up"      # Longer description of how the project works
+  how_to_test:  "TODO write up"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "TODO write up"      # Describe any external hardware needed
+  language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
+  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
+  clock_hz:     1000       # Clock frequency in Hz (if required)
+  picture:      ""      # relative path to a picture in your repository
+  tag:          ""      # comma separated list of tags: test encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
+  inputs:               # a description of what the inputs do
+    - clock
+    - cfg_frameinc
+    - cfg_framestrb
+    - cfg_mode
+    - cfg_sel0_in0
+    - cfg_sel0_in1
+    - cfg_sel0_in2
+    - cfg_sel0_in3
+  outputs:
+    - out 0
+    - out 1
+    - out 2
+    - out 3
+    - out 4
+    - out 5
+    - out 6
+    - out 7
+# A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
+  bidirectional:
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
